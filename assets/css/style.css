@@ -158,5 +158,131 @@ img{
 
 #card-p, #card-span{
     font-size: 1.2em;
+}
+
+#proj-disc, #contact-disc{
+    font-size: 1.5em;
     font-stretch: semi-expanded;
+}
+
+/* Projects */
+.project{
+    overflow: hidden;
+    position: relative;
+}
+
+.project .content{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--c-brand);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project img, .project .content{
+    transition: var(--transition);
+}
+
+.p-1, .p-2{
+    width: auto;
+    height: 800px;
+}
+
+.p-3{
+    width: auto;
+    height: auto;
+}
+
+.project:hover .content{
+    top: 0;
+}
+
+.project:hover img{
+    transform: translateY(-100%);
+}
+
+/* Contact */
+#contact .form-control{
+    border-radius: 5;
+}
+
+#contact .form-control:focus{
+    box-shadow: none;
+}
+
+#contact input.form-control{
+    height: 44px;
+}
+
+#my-form-button{
+    width: 125px;
+    height: 40px;
+    font-size: 1.3em;
+    background-color: var(--c-dark);
+}
+
+#my-form-button:hover{
+    background-color: var(--c-brand);
+}
+
+#contact{
+    flex-direction: column;
+}
+
+#my-form-status{
+    font-size: 1.2em;
+    color: white;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 2px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+#my-form-status.success{
+    background-color: var(--c-body);
+    animation: status 4s ease forwards;
+}
+
+#my-form-status.error{
+    background-color: #d9534f;
+    animation: status 4s ease forwards;
+}
+
+@keyframes status {
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.form-control{
+    font-size: 1.2em;
+    font-stretch: expanded;
+}
+
+/* Footer */
+footer{
+    background-color: var(--c-dark);
+}
+
+.footer-bottom{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
