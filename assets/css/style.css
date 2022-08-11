@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --c-brand: #826251;
+    --c-brand-rgb: 56, 163, 165;
+    --c-dark: #22577a;
+    --c-body: #57cc99;
+    --f-main: "Bebas Neue", sans-serif;
+    --transition: all .6s cubic-bezier(.165, .84, .44, 1);
+    --shadow: 0px 15px 40px rgba(0,0,0,0.1);
+}
+
+body{
+    font-family: var(--f-main);
+    color: var(--c-body);
+    line-height: 1.7;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+    font-weight: 700;
+    color: var(--c-dark);
+}
+
+a{
+    text-decoration: none;
+    color: var(--c-dark);
+    transition: var(--transition);
+}
+
+a:hover{
+    color: var(--c-brand);
+}
+
+img{
+    width: 100%;
+}
+
+.section-padding{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.text-brand{
+    color: var(--c-brand);
+}
+
+.section-title{
+    max-width: 560px;
+    margin: 0 auto 60px auto;
+}
+
+.section-title .line{
+    width: 60px;
+    height: 2px;
+    background-color: var(--c-brand);
+    display: inline-block;
+}
+
+.section-connector{
+    position: relative;
+}
+
+.section-connector::after{
+    content: "";
+    width: 2px;
+    height: 100px;
+    background-color: var(--c-brand);
+    position: absolute;
+    top: -60px;
+    left: 50%;
+}
+
+/* Navbar */
+.navbar{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: var(--transition);
+}
+
+.navbar.scrolled{
+    padding-top: 10px;
+    padding-bottom: 7px;
+    background-color: white;
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+}
+
+.navbar .navbar-nav .nav-link{
+    font-size: 1.5em;
+    color: var(--c-dark);
+}
+
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--c-brand);
+}
+
+.social-icon{
+    width: 36px;
+    height: 36px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Home */ 
+#home{
+    background-image: url(/assets/images/bg1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Location */
+.location-icon{
+    width: 60px;
+    height: 60px;
+    background-color: var(--c-brand);
+    color: white;
+    font-size: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-link{
+    display: inline-flex;
+    align-items: center;
+}
+
+.custom-link span{
+    font-weight: 700;
+}
+
+.custom-link i{
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--c-brand);
+    border-radius: 100px;
+    color: white;
+    margin-left: 6px;
+    transition: var(--transition);
+}
+
+.custom-link:hover i{
+    transform: translate3d(5px, -5px, 5px);
+}
+
+.mt-4{
+    font-size: 1.5em;
+}
+
+#card-p, #card-span{
+    font-size: 1.2em;
+    font-stretch: semi-expanded;
+}
